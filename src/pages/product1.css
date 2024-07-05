@@ -1,0 +1,766 @@
+.p1app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+
+  .p1main {
+    display: flex;
+    flex: 1;
+  }
+  .p2header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  .hamburger {
+    display: none; /* Hide the entire .hamburger button */
+  }
+  .p2logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ff69b4;
+  }
+
+  .p2user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+
+    .p2text {
+      font-weight: 700;
+      margin-right: 520px; /* Position from the left edge of .p2user */
+      font-size: 24px;
+    }
+    .p2coin {
+      font-weight: 600;
+      font-size: 20px;
+      display: inline-flex; /* Use inline-flex to keep elements in a line */
+      align-items: center; /* Align items vertically */
+      gap: 5px; /* Adjust the gap between text and image */
+      background-color: #fff2f4;
+      border-radius: 8px;
+      width: 150px;
+      height: 49px;
+      margin-right: 15px;
+      justify-content: center; /* Center content horizontally */
+      padding: 0 10px; /* Optional: Add padding for better spacing */
+    }
+
+    .p2img-container {
+      display: flex;
+      margin-right: 15px;
+
+      .p2img {
+        width: 30px; /* Adjust image width as needed */
+        height: 30px; /* Adjust image height as needed */
+        border-radius: 25px; /* Ensures the image appears in a circle */
+        background-color: #fff2f4; /* Sets background color inside the circle */
+        margin-right: 10px; /* Creates gap between images */
+        padding: 10px;
+      }
+    }
+  }
+
+  .p2sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-right: 1px solid #e9ecef;
+    margin-top: 90px;
+    position: fixed;
+
+    .close-sidebar {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .p2store {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      justify-content: left;
+      flex-wrap: wrap; /* Allow items to wrap if necessary */
+
+      .img {
+        margin-right: 50px; /* Adjust margin as needed */
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      .text img {
+        margin-left: 10px; /* Adjust margin as needed */
+      }
+    }
+
+    nav ul {
+      list-style-type: none; /* Removes default bullet points */
+      padding: 0; /* Removes default padding */
+    }
+
+    nav li {
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Adjust padding as needed */
+    }
+
+    nav li img {
+      margin-right: 8px; /* Adjust margin between image and text */
+    }
+    .p3active {
+      font-weight: bold;
+      width: 100%;
+      background-color: #fff2f4;
+      color: #000;
+      position: relative;
+    }
+    .p3active::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0;
+      height: 100%; /* Full height of the parent element */
+      width: 5px; /* Adjust thickness of the line */
+      background-color: #ff4081; /* Color of the line */
+    }
+    .no-underline {
+      text-decoration: none;
+      display: inline-block; /* Ensure the link behaves like an inline element */
+      vertical-align: middle; /* Align the link vertically with the image */
+      margin-top: 5px;
+    }
+    .dashboard-icon {
+      vertical-align: middle; /* Align the image vertically with the text */
+      margin-right: 10px; /* Adjust spacing between image and text */
+    }
+
+    .dashboard-text {
+      vertical-align: middle; /* Align the text vertically with the image */
+    }
+  }
+  .p3maincontainer {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+   
+    background-color: #f5f5f5;
+    
+
+    .phase3 {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      padding: 20px;
+      background-color: #ffffff;
+      margin-left: 255px;
+      margin-top: 100px;
+      height: auto;
+      z-index: 0;
+
+      .p3title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        z-index: 0;
+
+      }
+    }
+    .phase4 {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      z-index: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .p4head {
+        margin-bottom: 10px;
+        color: #030401;
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .p4available-stock {
+        margin-bottom: 20px;
+        color: #198754;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .p4stock-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 50px; /* Adjust the gap between divs as needed */
+        color: #030401;
+        font-weight: 500;
+        max-width: 1800px;
+        font-size: 16px;
+      }
+
+      .p4stock-actions > div {
+        flex: 1; /* Ensure equal width for both divs */
+      }
+
+      .p4stock-input {
+        width: 100%;
+      }
+
+      .p4input-description {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #868c9a;
+      }
+    }
+
+    .phase5 {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      z-index: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .p5head {
+        margin-bottom: 16px;
+        color: #030401;
+        font-weight: 500;
+        z-index: 0;
+        font-size: 20px;
+      }
+
+      .p5formControl {
+        width: 100%;
+        color: #030401;
+        z-index: 0;
+      }
+    }
+
+    .phase6 {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      z-index: 0;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .p6product-information {
+        max-width: 1600px;
+        margin: 0 auto;
+        z-index: 0;
+      }
+
+      .p6section-title {
+        margin-bottom: 20px;
+        color: #030401;
+        font-weight: 500;
+        z-index: 0;
+        font-size: 20px;
+      }
+
+      .p6product-description {
+        color: #030401;
+        font-weight: 400;
+        font-size: 14px;
+        z-index: 0;
+      }
+
+      .label {
+        color: #030401;
+        font-weight: 400;
+        z-index: 0;
+        font-size: 16px;
+      }
+      .p6metadata {
+        z-index: 0;
+        margin-top: 20px;
+      }
+    }
+
+    .container {
+      display: flex;
+      z-index: 0;
+      gap: 20px; /* Adjust gap as needed */
+
+      .phase7 {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        height: 348px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .p7section-title {
+          font-size: 18px;
+          margin-bottom: 15px;
+          color: #333;
+        }
+        .container {
+          display: flex;
+          justify-content: space-between;
+          max-width: 800px;
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+        }
+
+        .phase7,
+        .phase8 {
+          width: 48%;
+        }
+
+        .p7section-title,
+        .p8section-title {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+        .p7delivery-options {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+          width: 93%;
+          height: 250px;
+          padding: 16px; /* Optional: Adding padding for better spacing inside the container */
+        }
+
+        .p7 {
+          font-weight: 400;
+          font-size: 18px;
+          color: #030401;
+          margin-left: 15px;
+        }
+
+        .p71 {
+          font-size: 12px;
+          font-weight: 400;
+          color: #868c9a;
+          margin-top: 0;
+          margin-left: 15px;
+        }
+
+        .p7delivery-options label {
+          display: block;
+          color: #868c9a;
+          font-weight: 400;
+          font-size: 16px;
+          margin-left: 15px;
+          margin-bottom: 10px; /* Adjust this value to set the gap between labels */
+        }
+
+        .p7delivery-options label1 {
+          display: block;
+          color: #030401;
+          font-weight: 400;
+          font-size: 16px;
+          margin-left: 15px;
+          margin-bottom: 10px; /* Ensure consistency in spacing */
+        }
+
+        .sub8 {
+          font-size: 0.8em;
+          color: #666;
+        }
+
+        .p7delivery-options input[type="checkbox"] {
+          margin-right: 5px;
+          color: #030401;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+
+      .phase8 {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        height: 348px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .p8section-title {
+          font-size: 20px;
+          margin-bottom: 15px;
+          color: #030401;
+          font-weight: 500;
+        }
+
+        .sub8 {
+          font-weight: 400;
+          color: #868c9a;
+          font-size: 12px;
+        }
+
+        .slider-container {
+          position: relative;
+          width: 100%;
+          height: 300px; /* Adjust as needed */
+          overflow: hidden;
+        }
+
+        .slider-image-container {
+          width: 100%;
+          height: 100%;
+        }
+
+        .slider-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 95%;
+          object-fit: contain;
+        }
+
+        .right-enter {
+          transform: translateX(100%);
+        }
+
+        .right-enter-active {
+          transform: translateX(0);
+          transition: transform 300ms ease-in-out;
+        }
+
+        .right-exit {
+          transform: translateX(0);
+        }
+
+        .right-exit-active {
+          transform: translateX(-100%);
+          transition: transform 300ms ease-in-out;
+        }
+
+        .left-enter {
+          transform: translateX(-100%);
+        }
+
+        .left-enter-active {
+          transform: translateX(0);
+          transition: transform 300ms ease-in-out;
+        }
+
+        .left-exit {
+          transform: translateX(0);
+        }
+
+        .left-exit-active {
+          transform: translateX(100%);
+          transition: transform 300ms ease-in-out;
+        }
+
+        .slider-controls {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .left {
+          left: 10px;
+        }
+
+        .right {
+          right: 10px;
+        }
+
+        .slider-icon {
+          font-size: 24px;
+          color: #333;
+        }
+        .slider-controls:first-of-type {
+          left: 10px;
+        }
+
+        .slider-controls:last-of-type {
+          right: 10px;
+        }
+      }
+    }
+    .button-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+    }
+
+    .p3update-button {
+      display: block;
+      width: 359px;
+      height: 50px;
+      padding: 12px;
+      background-color: #d9d9d9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .p3update-button:hover {
+      background-color: #45a049;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .p1app {
+    .p2header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .p2header .p2logo img {
+      display: none;
+    }
+    .p2header .hamburger {
+      width: 25px;
+      height: 25px;
+      display: block; /* Ensure it's displayed properly */
+    }
+
+    .p2header .p2text {
+      display: none;
+    }
+
+    .p2header .p2coin {
+      font-size: 12px;
+    }
+
+    .p2header .p2coin img {
+      width: 15px;
+      height: 15px;
+    }
+
+    .p2header .p2img-container .p2img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .p2sidebar {
+      width: 200px;
+      height: 100%;
+      background-color: #fff;
+      padding: 1rem;
+      border-right: 1px solid #e9ecef;
+      margin-top: 0px; /* Adjust margin to clear header */
+      position: fixed;
+      left: -250px; /* Off-screen by default */
+      transition: transform 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    .p2sidebar.open {
+      left: 0; /* Slide in from the left when open */
+    }
+
+    .p2sidebar .close-sidebar {
+      display: block;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .p2sidebar .close-sidebar img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .p2sidebar .p2store {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      justify-content: left;
+      flex-wrap: wrap; /* Allow items to wrap if necessary */
+    }
+
+    .p2sidebar .p2store .img {
+      margin-right: 50px; /* Adjust margin as needed */
+    }
+
+    .p2sidebar .p2store .text {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .p2sidebar .p2store .text img {
+      margin-left: 10px; /* Adjust margin as needed */
+    }
+
+    .p2sidebar nav ul {
+      list-style-type: none; /* Removes default bullet points */
+      padding: 0; /* Removes default padding */
+    }
+
+    .p2sidebar nav li {
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Adjust padding as needed */
+    }
+
+    .p2sidebar nav li img {
+      margin-right: 8px; /* Adjust margin between image and text */
+    }
+
+    .p2sidebar .p3active {
+      font-weight: bold;
+      width: 100%;
+      background-color: #fff2f4;
+      color: #000;
+      position: relative;
+    }
+
+    .p2sidebar .p3active::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0;
+      height: 100%; /* Full height of the parent element */
+      width: 5px; /* Adjust thickness of the line */
+      background-color: #ff4081; /* Color of the line */
+    }
+
+    .p2sidebar .no-underline {
+      text-decoration: none;
+      display: inline-block; /* Ensure the link behaves like an inline element */
+      vertical-align: middle; /* Align the link vertically with the image */
+      margin-top: 5px;
+    }
+
+    .p2sidebar .dashboard-icon {
+      vertical-align: middle; /* Align the image vertically with the text */
+      margin-right: 10px; /* Adjust spacing between image and text */
+    }
+
+    .p2sidebar .dashboard-text {
+      vertical-align: middle; /* Align the text vertically with the image */
+    }
+
+    .p2sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+      display: block; /* Initially hidden */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: rgba(0, 0, 0, 0.25);  */
+      backdrop-filter: blur(5px); /* Blur effect */
+      z-index: 0; /* Ensure it's below the sidebar */
+    }
+
+    .p2sidebar.open ~ .sidebar-overlay {
+      display: block; /* Show overlay when sidebar is open */
+      z-index: 0; /* Ensure it's below the sidebar */
+    }
+
+    .p3maincontainer {
+      padding: 15px;
+      z-index: 0;
+      margin-top: 30px;
+      background-color: #f5f5f5;
+
+
+      .phase3 {
+        margin-left: 0;
+        margin-top: 60px;
+        padding: 10px;
+
+        .p3title {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .phase5 {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      
+      .p5formControl {
+        width: 100%;
+        color: #030401;
+      }
+
+      .phase6,
+      .phase7,
+      .phase8 {
+        padding: 15px;
+        margin-bottom: 15px;
+
+        .p5head,
+        .p6section-title,
+        .p7section-title,
+        .p8section-title {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .container {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 1px;
+        margin-right: 45px;
+        z-index: 0;
+
+        .phase7,
+        .phase8 {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .p7delivery-options {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+
+      .slider-container {
+        height: 200px;
+      }
+      .slider-image {
+        max-width: 50%; /* Adjust width to make it smaller */
+        left: 40%; /* Center horizontally */
+        transform: translateX(50%); /* Center horizontally */
+        top: 50%; /* Center vertically */
+        height: auto; /* Adjust height as needed for responsiveness */
+      }
+
+      .button-container {
+        .p3update-button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
